@@ -58,6 +58,7 @@
     .iconbox{width:38px;height:38px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-weight:800}
     .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:var(--soft);font-size:12px;color:#555;font-weight:700}
     .pill.dark{background:#171717;color:#fff}.pill.good{background:#e8f3ec;color:var(--good)}.pill.warn{background:#fff4dc;color:var(--warn)}
+    .item.learned-item{border-color:#cfe3d6;background:linear-gradient(180deg,#fff,#fbfefc)}.learned-badge{font-weight:850}.learned-badge.due{background:#fff0dc;color:#8a5a10}
     .section{display:none}.section.active{display:block}
     .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 18px}
     .search{flex:1;min-width:220px;background:white;border:1px solid var(--line);border-radius:13px;padding:11px 13px;outline:none}
@@ -144,8 +145,22 @@
     .quiz-question{background:#f5f5f2;border:1px solid var(--line);border-radius:18px;padding:20px}.quiz-sentence{font-size:22px;font-weight:800;line-height:1.65;margin:10px 0 4px}.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.quiz-option{border:1px solid var(--line);background:#fff;padding:12px 14px;border-radius:12px;text-align:left;font-weight:750}.quiz-option:hover{background:#f1f1ed}.quiz-option.correct{border-color:#78aa8f;background:#eaf5ee}.quiz-option.wrong{border-color:#d89a9a;background:#fff0f0}@media(max-width:560px){.quiz-options{grid-template-columns:1fr}}
     .kana-reading{font-size:13px;color:#8a8a84;margin-top:4px;letter-spacing:.025em;line-height:1.55}
     .home-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.data-note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:10px}
+
+    .goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.goal-box{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}.goal-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.goal-title{font-weight:850}.goal-count{font-size:22px;font-weight:900;letter-spacing:-.03em}.goal-controls{display:flex;gap:7px;align-items:center;margin-top:12px}.goal-input{width:76px;border:1px solid var(--line);border-radius:10px;padding:8px 9px;font:inherit;font-weight:800;text-align:center;background:#fff}.goal-bar{height:8px;border-radius:999px;background:#ecece8;overflow:hidden;margin-top:10px}.goal-bar i{display:block;height:100%;background:#171717;border-radius:999px;transition:.2s ease}.goal-help{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.55}.focus-card{border:1px solid var(--line);border-radius:16px;padding:16px;background:linear-gradient(135deg,#f7f7f3,#fff)}.focus-title{font-size:20px;font-weight:900;margin:6px 0}.focus-text{font-size:13px;color:var(--muted);line-height:1.7}.focus-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.radar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:14px}.radar-cell{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff}.radar-cell b{font-size:20px;display:block;margin-top:3px}.weak-list{display:grid;gap:9px;margin-top:12px}.weak-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:11px 12px;background:#fff}.weak-row small{display:block;color:var(--muted);margin-top:3px}.dashboard-label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:#8a8a84}.compact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.backup-details{margin-top:18px}.backup-details summary{cursor:pointer;font-weight:850;color:#555;list-style:none}.backup-details summary::-webkit-details-marker{display:none}.backup-details summary::before{content:'＋';display:inline-block;margin-right:8px}.backup-details[open] summary::before{content:'−'}
+    @media(max-width:720px){.goal-grid{grid-template-columns:1fr}.radar-grid{grid-template-columns:1fr 1fr}}
     .empty-state{padding:30px;text-align:center;color:var(--muted)}.tiny{font-size:12px;color:var(--muted)}
     .metric .num.compact{font-size:24px}.sync-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#1d7a4b;margin-right:6px}
+
+    .memory-curve{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0 4px}.curve-step{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:#676760}.curve-step:not(:last-child)::after{content:"→";color:#b6b6af;margin-left:2px}.curve-dot{width:8px;height:8px;border-radius:50%;background:#d0d0ca}.curve-step.active{color:#171717}.curve-step.active .curve-dot{background:#171717;box-shadow:0 0 0 4px rgba(23,23,23,.08)}
+    .review-modebar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.mode-btn{border:1px solid var(--line);background:#fff;border-radius:13px;padding:10px 13px;font-size:13px;font-weight:800;cursor:pointer}.mode-btn.active{background:#171717;color:#fff;border-color:#171717}.mode-btn small{font-weight:600;opacity:.72;margin-left:4px}
+    .micro-panel{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:linear-gradient(135deg,#f5f2ff,#fff);border:1px solid #e7def8;border-radius:18px;padding:16px 18px;margin-bottom:14px}.micro-panel h3{margin:0 0 5px}.micro-panel .muted{max-width:680px}.micro-badge{font-size:12px;font-weight:850;color:#5b3f87;background:#eee7fb;border-radius:999px;padding:7px 10px;white-space:nowrap}
+    .review-meta{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}.review-progress{font-size:12px;color:#777;font-weight:750}.memory-stage{background:#f0f0ed;color:#595953}.memory-stage.weak{background:#fff0f0;color:#914848}.memory-stage.strong{background:#eaf5ee;color:#17653f}
+    .plan-list{display:grid;gap:10px;margin-top:13px}.plan-step{display:grid;grid-template-columns:34px 1fr auto;gap:11px;align-items:center;border:1px solid var(--line);border-radius:15px;padding:12px 13px;background:#fff}.plan-num{width:30px;height:30px;border-radius:10px;background:#171717;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:850}.plan-step b{display:block;margin-bottom:3px}.plan-step .muted{font-size:12px}.plan-action{border:1px solid var(--line);background:#f5f5f2;border-radius:10px;padding:7px 9px;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap}
+    .habit-card{margin-top:14px;border:1px solid #e5dcfa;background:#faf8ff;border-radius:16px;padding:14px}.habit-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.habit-head b{font-size:14px}.habit-dots{display:flex;gap:5px;margin-top:10px}.habit-dot{width:22px;height:7px;border-radius:999px;background:#ddd9e7}.habit-dot.on{background:#6c54a3}.habit-tip{font-size:12px;color:#6d6380;line-height:1.6;margin-top:9px}
+    .note-box{width:100%;min-height:88px;border:1px solid var(--line);background:#fff;border-radius:13px;padding:11px 12px;font:inherit;line-height:1.6;resize:vertical;outline:none}.note-box:focus{border-color:#8d82a8;box-shadow:0 0 0 3px rgba(108,84,163,.08)}.note-help{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.55}
+    .overdue-callout{background:#fff4e8;border:1px solid #efd5ae;border-radius:14px;padding:11px 13px;color:#78501c;font-size:12px;line-height:1.6;margin-top:10px}.overdue-callout.good{background:#eef8f2;border-color:#cce5d6;color:#215f3d}
+    @media(max-width:620px){.micro-panel{grid-template-columns:1fr}.micro-badge{justify-self:start}.plan-step{grid-template-columns:30px 1fr}.plan-action{grid-column:2;justify-self:start}.memory-curve{gap:5px}.curve-step{font-size:10px}}
+
     @media(max-width:950px){.app{grid-template-columns:1fr}aside{position:fixed;z-index:15;left:0;right:0;bottom:0;top:auto;height:auto;border-right:0;border-top:1px solid var(--line);padding:10px 12px;background:rgba(251,251,249,.96);backdrop-filter:blur(12px)}.brand,.side-card{display:none}.nav{grid-template-columns:repeat(6,1fr);gap:4px}.nav button{font-size:12px;padding:10px 5px;justify-content:center;flex-direction:column;gap:4px}.nav button span:first-child{font-size:18px}main{padding:26px 18px 100px}.grid-4{grid-template-columns:repeat(2,1fr)}.layout-2{grid-template-columns:1fr}.topbar{align-items:center}.streak{font-size:13px}}
     @media(max-width:700px){.shadow-grid{grid-template-columns:1fr}.shadow-player{position:static}.vocab-hero{grid-template-columns:1fr}.vocab-hero-image{width:100%;height:190px}.vocab-list-row{grid-template-columns:54px 1fr}.vocab-list-row>.open-btn{grid-column:1/-1}.word-thumb{width:54px;height:54px}}
     @media(max-width:560px){h1{font-size:28px}.grid-4{grid-template-columns:1fr 1fr}.metric{padding:15px}.metric .num{font-size:25px}.item{grid-template-columns:1fr}.open-btn{width:100%}.review-main{font-size:38px}.drawer{padding:20px}.wrong-table{font-size:13px}.nav button{font-size:10px}}
@@ -156,7 +171,7 @@
   <aside>
     <div class="brand"><div class="brand-mark">日</div><div>高频日语</div></div>
     <div class="nav">
-      <button class="active" data-target="home"><span>⌂</span><span>今日学习</span></button>
+      <button class="active" data-target="home"><span>⌂</span><span>首页</span></button>
       <button data-target="grammar"><span>文</span><span>语法库</span></button>
       <button data-target="vocab"><span>語</span><span>单词库</span></button>
       <button data-target="shadowing"><span>声</span><span>跟读</span></button>
@@ -169,71 +184,85 @@
   <main>
     <section id="home" class="section active">
       <div class="topbar">
-        <div><div class="eyebrow">Personal JLPT Workspace</div><h1>今天只学值得记住的。</h1><div class="muted">N5 → N2 高频语法、常用词、错题和间隔复习。</div></div>
+        <div><div class="eyebrow">Personal JLPT Workspace</div><h1>今天学多少，你自己决定。</h1><div class="muted">首页只告诉你进度、复习压力和薄弱项。目标由你设，系统不替你硬塞任务。</div></div>
         <div class="streak">🔥 连续学习 <b id="homeStreak">0</b> 天</div>
       </div>
+
       <div class="grid-4">
-        <div class="metric"><div class="muted">今日语法练习</div><div class="num compact" id="homeGrammar">0 / 3</div><div class="hint">语法复习造句与动词变形都会计入</div></div>
-        <div class="metric"><div class="muted">今日单词练习</div><div class="num compact" id="homeVocab">0 / 20</div><div class="hint">单词复习中的假名输入 + SRS</div></div>
-        <div class="metric"><div class="muted">待复习</div><div class="num" id="homeDue">0</div><div class="hint">SRS 根据记忆情况自动安排</div></div>
-        <div class="metric"><div class="muted">近 7 日正确率</div><div class="num" id="homeAccuracy">—</div><div class="hint">来自实际练习记录</div></div>
+        <div class="metric"><div class="muted">现在到期</div><div class="num" id="homeDue">0</div><div class="hint">需要真正处理的 SRS 内容</div></div>
+        <div class="metric"><div class="muted">下一次复习</div><div class="num compact" id="homeNextReview">—</div><div class="hint">按当前艾宾浩斯队列计算</div></div>
+        <div class="metric"><div class="muted">薄弱项</div><div class="num" id="homeWeak">0</div><div class="hint">来自错题与反复出错记录</div></div>
+        <div class="metric"><div class="muted">近 7 日正确率</div><div class="num" id="homeAccuracy">—</div><div class="hint">只看真实练习结果</div></div>
       </div>
 
       <div class="layout-2">
         <div class="card">
-          <h2>今日学习清单</h2>
-          <div class="task"><div class="task-left"><div class="iconbox">文</div><div><b>〜わけではない</b><div class="muted">N2 · 高频否定表达</div></div></div><span class="pill dark">开始</span></div>
-          <div class="task"><div class="task-left"><div class="iconbox">語</div><div><b>掛ける・取る・出す</b><div class="muted">高频多义动词</div></div></div><span class="pill">20 词</span></div>
-          <div class="task"><div class="task-left"><div class="iconbox">声</div><div><b>N3 跟读 · 手机与学习时间</b><div class="muted">逐句假名 · 中译 · 0.9× 跟读</div></div></div><span class="pill good">4 段</span></div>
-          <div class="task"><div class="task-left"><div class="iconbox">↻</div><div><b>间隔复习</b><div class="muted">优先处理最近错过的内容</div></div></div><span class="pill warn">42 项</span></div>
-          <div class="task"><div class="task-left"><div class="iconbox">!</div><div><b>辨析：ように / ために</b><div class="muted">近 7 天错了 3 次</div></div></div><span class="pill good">重点</span></div>
+          <div class="practice-head"><div><div class="eyebrow">Your Daily Goal</div><h2 style="margin-top:6px">今日新学目标</h2><div class="muted">目标只是方向，不是债务。忙的时候可以设成 0；今天想冲一点，也可以随时改。</div></div><span class="pill good" id="goalSavedBadge">可自定义</span></div>
+          <div class="goal-grid">
+            <div class="goal-box">
+              <div class="goal-head"><div><div class="goal-title">语法</div><div class="tiny">今天新加入复习的语法</div></div><div class="goal-count" id="goalGrammarProgress">0 / 3</div></div>
+              <div class="goal-bar"><i id="goalGrammarBar" style="width:0%"></i></div>
+              <div class="goal-controls"><span class="tiny">目标</span><input class="goal-input" id="goalGrammarInput" type="number" min="0" max="50" step="1" value="3"><span class="tiny">项</span><button class="secondary" onclick="goSection('grammar')">去语法库</button></div>
+            </div>
+            <div class="goal-box">
+              <div class="goal-head"><div><div class="goal-title">单词</div><div class="tiny">今天新加入复习的词汇</div></div><div class="goal-count" id="goalVocabProgress">0 / 20</div></div>
+              <div class="goal-bar"><i id="goalVocabBar" style="width:0%"></i></div>
+              <div class="goal-controls"><span class="tiny">目标</span><input class="goal-input" id="goalVocabInput" type="number" min="0" max="200" step="1" value="20"><span class="tiny">项</span><button class="secondary" onclick="goSection('vocab')">去单词库</button></div>
+            </div>
+          </div>
+          <div class="compact-actions"><button class="primary" onclick="saveTodayGoals(false)">保存今天目标</button><button class="secondary" onclick="saveTodayGoals(true)">同时设为以后默认</button></div>
+          <div class="goal-help">“新学”以你点下「学过了 · 加入复习」为准，不把重复练习算成新学。</div>
         </div>
+
         <div class="card">
-          <h2>N5 → N2 掌握度</h2>
-          <div class="level-row"><b>N5</b><div class="bar"><i id="barN5" style="width:0%"></i></div><span id="progressN5">0%</span></div>
-          <div class="level-row"><b>N4</b><div class="bar"><i id="barN4" style="width:0%"></i></div><span id="progressN4">0%</span></div>
-          <div class="level-row"><b>N3</b><div class="bar"><i id="barN3" style="width:0%"></i></div><span id="progressN3">0%</span></div>
-          <div class="level-row"><b>N2</b><div class="bar"><i id="barN2" style="width:0%"></i></div><span id="progressN2">0%</span></div>
-          <div class="callout" style="margin-top:18px"><b>策略：</b> 不追求“背完词表”，优先把 JLPT 高频、生活常用、搭配价值高的词学深。</div>
+          <div class="dashboard-label">Priority</div>
+          <div id="homeFocus" class="focus-card" style="margin-top:10px"></div>
+          <div class="habit-card">
+            <div class="habit-head"><div><b>每日提取习惯</b><div class="muted">每天完成至少 5 次主动回忆，就算守住习惯。</div></div><span class="pill good" id="microStreak">连续 0 天</span></div>
+            <div class="habit-dots" id="microHabitDots"></div>
+            <div class="habit-tip" id="microHabitTip">不用单独开“微复习”；今日复习本身就是小剂量、高频率。</div>
+            <div class="home-actions"><button class="primary" onclick="startStandardReview()">开始今日复习</button><button class="secondary" onclick="goSection('review')">复习中心</button></div>
+          </div>
         </div>
       </div>
-      <div class="card" style="margin-top:18px">
-        <div class="practice-head"><div><div class="eyebrow">Local Study Data</div><h2 style="margin-top:6px">学习记录与备份</h2><div class="muted">所有进度默认保存在这个浏览器里。建议偶尔导出一份 JSON 备份。</div></div><span class="pill good"><span class="sync-dot"></span>本地保存</span></div>
-        <div class="home-actions"><button class="primary" onclick="exportStudyData()">导出学习数据</button><label class="secondary" style="cursor:pointer">导入备份<input id="importStudyFile" type="file" accept="application/json" style="display:none" onchange="importStudyData(this.files?.[0])"></label><button class="secondary" onclick="resetStudyData()">清空学习记录</button></div>
-        <div class="data-note">学习记录只保存在当前浏览器中，不需要账号、API Key 或服务器。建议定期导出备份。</div>
+
+      <div class="layout-2">
+        <div class="card">
+          <div class="practice-head"><div><div class="eyebrow">Review Forecast</div><h2 style="margin-top:6px">复习雷达</h2><div class="muted">不是只看“今天欠多少”，而是提前看到未来几天的复习压力。</div></div></div>
+          <div class="radar-grid">
+            <div class="radar-cell"><span class="tiny">现在到期</span><b id="radarNow">0</b></div>
+            <div class="radar-cell"><span class="tiny">未来 24h</span><b id="radar24h">0</b></div>
+            <div class="radar-cell"><span class="tiny">未来 3 天</span><b id="radar3d">0</b></div>
+            <div class="radar-cell"><span class="tiny">未来 7 天</span><b id="radar7d">0</b></div>
+          </div>
+          <div class="callout" id="radarTip" style="margin-top:14px">复习压力会根据你的 SRS 节点自动更新。</div>
+        </div>
+
+        <div class="card">
+          <div class="practice-head"><div><div class="eyebrow">Weak Points</div><h2 style="margin-top:6px">最近最该补的地方</h2><div class="muted">这里只显示真正反复出错的内容，不给你制造假焦虑。</div></div><button class="secondary" onclick="goSection('wrong')">全部错题</button></div>
+          <div id="homeWeakList" class="weak-list"></div>
+        </div>
       </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2>N5 → N2 掌握度</h2>
+        <div class="level-row"><b>N5</b><div class="bar"><i id="barN5" style="width:0%"></i></div><span id="progressN5">0%</span></div>
+        <div class="level-row"><b>N4</b><div class="bar"><i id="barN4" style="width:0%"></i></div><span id="progressN4">0%</span></div>
+        <div class="level-row"><b>N3</b><div class="bar"><i id="barN3" style="width:0%"></i></div><span id="progressN3">0%</span></div>
+        <div class="level-row"><b>N2</b><div class="bar"><i id="barN2" style="width:0%"></i></div><span id="progressN2">0%</span></div>
+        <div class="callout" style="margin-top:18px"><b>看趋势，不看虚荣数字：</b> 掌握度来自复习表现，不是“点开过一次”就算学会。</div>
+      </div>
+
+      <details class="card backup-details">
+        <summary>学习数据与备份</summary>
+        <div class="muted" style="margin-top:10px">所有进度保存在当前浏览器。换设备前建议导出 JSON。</div>
+        <div class="home-actions"><button class="primary" onclick="exportStudyData()">导出学习数据</button><label class="secondary" style="cursor:pointer">导入备份<input id="importStudyFile" type="file" accept="application/json" style="display:none" onchange="importStudyData(this.files?.[0])"></label><button class="secondary" onclick="resetStudyData()">清空学习记录</button></div>
+      </details>
     </section>
 
     <section id="grammar" class="section">
       <div class="topbar"><div><div class="eyebrow">Grammar Library</div><h1>语法库</h1><div class="muted">按 JLPT 等级与真实使用价值筛选。</div></div></div>
-      <div class="card conj-trainer">
-        <div class="conj-top">
-          <div><div class="practice-label">动词变形训练</div><h2 style="margin-top:10px">把活用练成条件反射</h2><div class="muted">随机抽高频动词，也可以指定某一种变形。标准书面活用按 JLPT 规则判定。</div></div>
-          <div class="conj-stats"><span class="pill" id="conjAccuracy">正确率 —</span><span class="pill good" id="conjStreak">连续正确 0</span></div>
-        </div>
-        <div class="conj-controls">
-          <select id="conjFormSelect" class="conj-select" aria-label="选择变形类型">
-            <option value="random">随机全部变形</option>
-            <option value="masu">ます形</option><option value="te">て形</option><option value="ta">た形</option><option value="nai">ない形</option>
-            <option value="potential">可能形</option><option value="volitional">意向形</option><option value="conditional">ば形</option>
-            <option value="imperative">命令形</option><option value="passive">被动形</option><option value="causative">使役形</option><option value="causativePassive">使役被动形</option>
-          </select>
-          <button class="secondary" id="newConjQuestion">换一道题</button>
-        </div>
-        <div class="conj-question">
-          <div class="eyebrow" id="conjLevel">N5 · 基础活用</div>
-          <div class="conj-prompt"><span class="conj-verb" id="conjVerb">書く</span><span class="conj-arrow">→</span><span class="conj-form" id="conjFormLabel">て形</span></div>
-          <div class="conj-type" id="conjVerbType">五段动词</div>
-          <div class="conj-input-row"><input id="conjInput" class="conj-input" lang="ja" autocomplete="off" spellcheck="false" placeholder="输入变形后的日语…" /><button class="primary" id="checkConj">检查</button></div>
-          <div class="practice-actions"><button class="secondary" id="showConjAnswer">显示答案</button></div>
-          <div id="conjFeedback" class="feedback"></div>
-        </div>
-      </div>
-      <div class="card" style="margin-bottom:18px">
-        <div class="practice-head"><div><div class="practice-label">JLPT 语法快练</div><h2 style="margin-top:10px">四选一 · 高频陷阱</h2><div class="muted">练考试里的接续、语义和相似语法辨析。答错会直接进错题本。</div></div><div class="conj-stats"><span class="pill" id="quizAccuracy">正确率 —</span></div></div>
-        <div class="conj-controls"><select id="quizLevelSelect" class="conj-select"><option value="ALL">N5–N2 混合</option><option value="N5">N5</option><option value="N4">N4</option><option value="N3">N3</option><option value="N2">N2</option></select><button class="secondary" onclick="nextGrammarQuiz()">换一道题</button></div>
-        <div id="grammarQuizBox" class="quiz-question"></div>
-      </div>
+      <div class="callout" style="margin-bottom:18px"><b>学习库只负责理解。</b> JLPT 四选一和动词变形已经集中到「复习中心 → 专项复习」，避免边学边测打断理解。</div>
       <div class="toolbar">
         <input id="grammarSearch" class="search" placeholder="搜索语法、中文含义…" />
         <button class="filter active" data-gfilter="ALL">全部</button>
@@ -272,7 +301,17 @@
     </section>
 
     <section id="review" class="section">
-      <div class="topbar"><div><div class="eyebrow">SRS Review</div><h1>间隔复习</h1><div class="muted">词库和语法库负责学习；这里负责真正输出。单词先写读音，语法先自己造句，再评价记忆程度。<span id="reviewDueLabel" class="tiny"></span></div></div></div>
+      <div class="topbar"><div><div class="eyebrow">Memory Review</div><h1>复习中心</h1><div class="muted">只有一套主复习：先处理真正到期的内容，到期太少时自动补少量薄弱/近期内容。忘记的卡会在本轮稍后重新出现，不需要盯着 10 分钟倒计时。<span id="reviewDueLabel" class="tiny"></span></div></div></div>
+      <div class="review-modebar">
+        <button class="mode-btn active" id="standardReviewBtn" onclick="startStandardReview()">今日复习 <small>到期 + 巩固</small></button>
+        <button class="mode-btn" onclick="document.getElementById('grammarQuizBox')?.scrollIntoView({behavior:'smooth',block:'center'})">JLPT 快练 <small>专项</small></button>
+        <button class="mode-btn" onclick="document.getElementById('conjVerb')?.scrollIntoView({behavior:'smooth',block:'center'})">动词变形 <small>专项</small></button>
+      </div>
+      <div class="card" style="margin-bottom:14px;padding:15px 17px">
+        <div class="practice-head"><div><b>艾宾浩斯复习节点</b><div class="muted">记忆稳定就向后推进；忘记则回到更近的节点。不是死背曲线，而是用曲线做骨架、用你的表现做调整。</div></div><span class="pill" id="curveStageLabel">当前节点 —</span></div>
+        <div class="memory-curve" id="memoryCurve"></div>
+        <div class="overdue-callout good" id="reviewLoadHint">先完成今天真正到期的内容，不需要一次清空所有未来任务。</div>
+      </div>
       <div class="toolbar review-filterbar">
         <button class="filter active" data-rfilter="ALL">混合复习</button>
         <button class="filter" data-rfilter="vocab">只复习单词</button>
@@ -281,12 +320,44 @@
       <div class="review-shell">
         <div class="review-card" id="reviewCard"></div>
         <div class="review-actions" id="scoreActions" style="display:none">
-          <button class="score-btn" data-score="0">完全忘了<br><small>10 分钟后</small></button>
-          <button class="score-btn" data-score="1">有印象<br><small>明天再来</small></button>
-          <button class="score-btn" data-score="2">记得意思<br><small>3 天后</small></button>
-          <button class="score-btn" data-score="3">熟练掌握<br><small>长期复习</small></button>
+          <button class="score-btn" data-score="0">完全忘了<br><small>本轮再来 · 10分钟节点</small></button>
+          <button class="score-btn" data-score="1">有印象<br><small>本轮再来 · 1天节点</small></button>
+          <button class="score-btn" data-score="2">记得意思<br><small>继续推进</small></button>
+          <button class="score-btn" data-score="3">熟练掌握<br><small>跨级推进</small></button>
         </div>
-        <div class="data-note" id="reviewScheduleNote">前三档都不会从复习计划里消失；只是下次出现时间不同。</div>
+        <div class="data-note" id="reviewScheduleNote">完全忘了 / 有印象：本轮稍后会重新出现；10 分钟 / 1 天是下一次正式复习节点，不是让你现在停下来等。所有档位以后都会继续出现。</div>
+      </div>
+      <div id="specialReview" style="margin-top:24px">
+        <div class="practice-head" style="margin-bottom:12px"><div><div class="eyebrow">Targeted Review</div><h2 style="margin-top:6px">专项复习</h2><div class="muted">标准复习负责记忆周期；专项复习负责考试识别和动词活用。答错会进入错题，并被系统优先拉回。</div></div><span class="pill">输出训练</span></div>
+      <div class="card conj-trainer">
+        <div class="conj-top">
+          <div><div class="practice-label">专项复习 · 动词变形</div><h2 style="margin-top:10px">把活用练成条件反射</h2><div class="muted">随机抽高频动词，也可以指定某一种变形。标准书面活用按 JLPT 规则判定。</div></div>
+          <div class="conj-stats"><span class="pill" id="conjAccuracy">正确率 —</span><span class="pill good" id="conjStreak">连续正确 0</span></div>
+        </div>
+        <div class="conj-controls">
+          <select id="conjFormSelect" class="conj-select" aria-label="选择变形类型">
+            <option value="random">随机全部变形</option>
+            <option value="masu">ます形</option><option value="te">て形</option><option value="ta">た形</option><option value="nai">ない形</option>
+            <option value="potential">可能形</option><option value="volitional">意向形</option><option value="conditional">ば形</option>
+            <option value="imperative">命令形</option><option value="passive">被动形</option><option value="causative">使役形</option><option value="causativePassive">使役被动形</option>
+          </select>
+          <button class="secondary" id="newConjQuestion">换一道题</button>
+        </div>
+        <div class="conj-question">
+          <div class="eyebrow" id="conjLevel">N5 · 基础活用</div>
+          <div class="conj-prompt"><span class="conj-verb" id="conjVerb">書く</span><span class="conj-arrow">→</span><span class="conj-form" id="conjFormLabel">て形</span></div>
+          <div class="conj-type" id="conjVerbType">五段动词</div>
+          <div class="conj-input-row"><input id="conjInput" class="conj-input" lang="ja" autocomplete="off" spellcheck="false" placeholder="输入变形后的日语…" /><button class="primary" id="checkConj">检查</button></div>
+          <div class="practice-actions"><button class="secondary" id="showConjAnswer">显示答案</button></div>
+          <div id="conjFeedback" class="feedback"></div>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:18px">
+        <div class="practice-head"><div><div class="practice-label">专项复习 · JLPT 语法快练</div><h2 style="margin-top:10px">四选一 · 高频陷阱</h2><div class="muted">练考试里的接续、语义和相似语法辨析。答错会直接进错题本。</div></div><div class="conj-stats"><span class="pill" id="quizAccuracy">正确率 —</span></div></div>
+        <div class="conj-controls"><select id="quizLevelSelect" class="conj-select"><option value="ALL">N5–N2 混合</option><option value="N5">N5</option><option value="N4">N4</option><option value="N3">N3</option><option value="N2">N2</option></select><button class="secondary" onclick="nextGrammarQuiz()">换一道题</button></div>
+        <div id="grammarQuizBox" class="quiz-question"></div>
+      </div>
+        <div class="data-note">建议顺序：先清当天到期的单词/语法，再做 5～10 道专项。JLPT 快练答错会把对应语法拉回 10 分钟节点；动词变形答错会在 10 分钟后优先回抽。</div>
       </div>
     </section>
 
@@ -400,7 +471,7 @@ function quizStats(){try{return JSON.parse(localStorage.getItem('jpGrammarQuizSt
 function renderQuizStats(){const d=quizStats(),el=document.getElementById('quizAccuracy');if(el)el.textContent=d.attempts?`正确率 ${Math.round(d.correct/d.attempts*100)}%`:'正确率 —'}
 function nextGrammarQuiz(){const lv=document.getElementById('quizLevelSelect')?.value||'ALL',pool=grammarQuizData.filter(q=>lv==='ALL'||q.level===lv);let q=pool[Math.floor(Math.random()*pool.length)];if(currentGrammarQuiz&&pool.length>1){let n=0;while(q.id===currentGrammarQuiz.id&&n++<10)q=pool[Math.floor(Math.random()*pool.length)]}currentGrammarQuiz=q;const box=document.getElementById('grammarQuizBox');if(!box)return;box.innerHTML=`<div class="eyebrow">${q.level} · JLPT 文法</div><div class="quiz-sentence">${q.text} <button class="audio-btn" onclick="speakText('${q.text.replace('（　）','').replace(/'/g,"\\'")}')">🔊</button></div><div class="kana-reading">${q.reading}</div><div class="quiz-options">${q.options.map((o,i)=>`<button class="quiz-option" onclick="answerGrammarQuiz(${i})">${i+1}. ${o}</button>`).join('')}</div><div id="quizFeedback" class="feedback"></div>`}
 window.nextGrammarQuiz=nextGrammarQuiz;
-window.answerGrammarQuiz=function(i){if(!currentGrammarQuiz)return;const q=currentGrammarQuiz,ok=i===q.answer,buttons=[...document.querySelectorAll('#grammarQuizBox .quiz-option')];buttons.forEach((b,n)=>{b.disabled=true;if(n===q.answer)b.classList.add('correct');else if(n===i&&!ok)b.classList.add('wrong')});const fb=document.getElementById('quizFeedback');fb.className=`feedback show ${ok?'good':'bad'}`;fb.innerHTML=`<b>${ok?'正解！考试识别也要练成条件反射。✅':'这里被绕到了。'}</b><br>${q.explain}<br><span class="practice-tip">正确答案：${q.options[q.answer]}</span>`;const st=quizStats();st.attempts++;if(ok)st.correct++;localStorage.setItem('jpGrammarQuizStats',JSON.stringify(st));renderQuizStats();savePractice('grammar',q.grammarId,ok,q.options[i]);}
+window.answerGrammarQuiz=function(i){if(!currentGrammarQuiz)return;const q=currentGrammarQuiz,ok=i===q.answer,buttons=[...document.querySelectorAll('#grammarQuizBox .quiz-option')];buttons.forEach((b,n)=>{b.disabled=true;if(n===q.answer)b.classList.add('correct');else if(n===i&&!ok)b.classList.add('wrong')});const fb=document.getElementById('quizFeedback');fb.className=`feedback show ${ok?'good':'bad'}`;fb.innerHTML=`<b>${ok?'正解！考试识别也要练成条件反射。✅':'这里被绕到了。'}</b><br>${q.explain}<br><span class="practice-tip">正确答案：${q.options[q.answer]}</span>`;const st=quizStats();st.attempts++;if(ok)st.correct++;localStorage.setItem('jpGrammarQuizStats',JSON.stringify(st));renderQuizStats();savePractice('grammar',q.grammarId,ok,q.options[i]);if(!ok)nudgeGrammarReviewFromQuiz(q.grammarId);renderHomeStats();}
 document.getElementById('quizLevelSelect')?.addEventListener('change',nextGrammarQuiz);
 
 const conjugationForms=[
@@ -497,11 +568,20 @@ let currentConj=null,conjStreak=0;
 function loadConjStats(){try{return JSON.parse(localStorage.getItem('jpConjStats')||'{"attempts":0,"correct":0,"streak":0}')}catch(e){return {attempts:0,correct:0,streak:0}}}
 function saveConjStats(ok){const d=loadConjStats();d.attempts++;if(ok){d.correct++;d.streak=(d.streak||0)+1}else d.streak=0;localStorage.setItem('jpConjStats',JSON.stringify(d));conjStreak=d.streak;renderConjStats()}
 function renderConjStats(){const d=loadConjStats();document.getElementById('conjAccuracy').textContent=d.attempts?`正确率 ${Math.round(d.correct/d.attempts*100)}%`:'正确率 —';document.getElementById('conjStreak').textContent=`连续正确 ${d.streak||0}`}
+function loadConjRetry(){try{return JSON.parse(localStorage.getItem('jpConjRetry')||'[]')}catch(e){return []}}
+function saveConjRetry(x){localStorage.setItem('jpConjRetry',JSON.stringify(x))}
+function conjRetryKey(verb,form){return `${verb.word}:${form.id}`}
+function queueConjRetry(verb,form){const list=loadConjRetry(),key=conjRetryKey(verb,form),old=list.find(x=>x.key===key);if(old){old.due=Date.now()+10*60000;old.misses=(old.misses||0)+1}else list.push({key,word:verb.word,form:form.id,due:Date.now()+10*60000,misses:1});saveConjRetry(list)}
+function clearConjRetry(verb,form){saveConjRetry(loadConjRetry().filter(x=>x.key!==conjRetryKey(verb,form)))}
+function dueConjRetry(selected='random'){const now=Date.now();return loadConjRetry().filter(x=>x.due<=now&&(selected==='random'||x.form===selected)).sort((a,b)=>(b.misses||0)-(a.misses||0)||a.due-b.due)}
 function newConjQuestion(){
  const selected=document.getElementById('conjFormSelect')?.value||'random';
- const form=selected==='random'?conjugationForms[Math.floor(Math.random()*conjugationForms.length)]:conjugationForms.find(f=>f.id===selected);
- let verb=conjugationVerbs[Math.floor(Math.random()*conjugationVerbs.length)];
- if(currentConj && conjugationVerbs.length>1){let guard=0;while(verb.word===currentConj.verb.word&&guard++<8)verb=conjugationVerbs[Math.floor(Math.random()*conjugationVerbs.length)]}
+ const retry=dueConjRetry(selected);
+ let form,verb;
+ if(retry.length){const weak=retry[0];form=conjugationForms.find(f=>f.id===weak.form);verb=conjugationVerbs.find(v=>v.word===weak.word)}
+ if(!form)form=selected==='random'?conjugationForms[Math.floor(Math.random()*conjugationForms.length)]:conjugationForms.find(f=>f.id===selected);
+ if(!verb)verb=conjugationVerbs[Math.floor(Math.random()*conjugationVerbs.length)];
+ if(currentConj && conjugationVerbs.length>1 && !retry.length){let guard=0;while(verb.word===currentConj.verb.word&&guard++<8)verb=conjugationVerbs[Math.floor(Math.random()*conjugationVerbs.length)]}
  currentConj={verb,form};
  document.getElementById('conjVerb').textContent=verb.word;document.getElementById('conjFormLabel').textContent=form.label;document.getElementById('conjVerbType').textContent=`${verbTypeLabel(verb)}${verb.note?' · '+verb.note:''}`;document.getElementById('conjLevel').textContent=`${form.level} · ${form.group}活用`;
  const input=document.getElementById('conjInput'),fb=document.getElementById('conjFeedback');if(input){input.value='';input.focus()}if(fb)fb.className='feedback';
@@ -512,36 +592,87 @@ function checkConjugation(){
  if(!raw){box.classList.add('neutral');box.innerHTML='<b>先写出变形。</b><br>建议不要看答案，先强制回忆一次。';return}
  const norm=normalizeJP(raw),answers=acceptableConjAnswers(verb,form.id),ok=answers.some(a=>normalizeJP(a)===norm);
  const main=buildConjugation(verb,form.id,false),reading=buildConjugation(verb,form.id,true);
- if(ok){box.classList.add('good');box.innerHTML=`<b>正解！${['👏','🔥','✅','很好。'][Math.floor(Math.random()*4)]}</b><br>${verb.word} → <span class="answer-chip">${main}</span>${main!==reading?` <span class="practice-tip">（${reading}）</span>`:''}<div class="conj-rule">${conjugationRule(verb,form.id)}</div>`;savePractice('conjugation',`${verb.word}:${form.id}`,true,raw);saveConjStats(true)}
- else{box.classList.add('bad');box.innerHTML=`<b>这里变形错了。</b><br>你的答案：${escapeHtml(raw)}<br>正确答案：<span class="answer-chip">${main}</span>${main!==reading?` <span class="practice-tip">（${reading}）</span>`:''}<div class="conj-rule"><b>规则：</b>${conjugationRule(verb,form.id)}</div>`;savePractice('conjugation',`${verb.word}:${form.id}`,false,raw);saveConjStats(false)}
+ if(ok){box.classList.add('good');box.innerHTML=`<b>正解！${['👏','🔥','✅','很好。'][Math.floor(Math.random()*4)]}</b><br>${verb.word} → <span class="answer-chip">${main}</span>${main!==reading?` <span class="practice-tip">（${reading}）</span>`:''}<div class="conj-rule">${conjugationRule(verb,form.id)}</div>`;savePractice('conjugation',`${verb.word}:${form.id}`,true,raw);saveConjStats(true);clearConjRetry(verb,form)}
+ else{box.classList.add('bad');box.innerHTML=`<b>这里变形错了。</b><br>你的答案：${escapeHtml(raw)}<br>正确答案：<span class="answer-chip">${main}</span>${main!==reading?` <span class="practice-tip">（${reading}）</span>`:''}<div class="conj-rule"><b>规则：</b>${conjugationRule(verb,form.id)}</div>`;savePractice('conjugation',`${verb.word}:${form.id}`,false,raw);saveConjStats(false);queueConjRetry(verb,form)}
 }
-function revealConjugation(){if(!currentConj)return;const {verb,form}=currentConj,box=document.getElementById('conjFeedback'),main=buildConjugation(verb,form.id,false),reading=buildConjugation(verb,form.id,true);box.className='feedback show neutral';box.innerHTML=`答案：<span class="answer-chip">${main}</span>${main!==reading?` <span class="practice-tip">（${reading}）</span>`:''}<div class="conj-rule"><b>规则：</b>${conjugationRule(verb,form.id)}</div><div class="practice-tip">看完后建议点“换一道题”，再靠记忆做一遍同类活用。</div>`}
+function revealConjugation(){if(!currentConj)return;const {verb,form}=currentConj,box=document.getElementById('conjFeedback'),main=buildConjugation(verb,form.id,false),reading=buildConjugation(verb,form.id,true);queueConjRetry(verb,form);savePractice('conjugation',`${verb.word}:${form.id}`,false,'[reveal]');box.className='feedback show neutral';box.innerHTML=`答案：<span class="answer-chip">${main}</span>${main!==reading?` <span class="practice-tip">（${reading}）</span>`:''}<div class="conj-rule"><b>规则：</b>${conjugationRule(verb,form.id)}</div><div class="practice-tip">看完后建议点“换一道题”，再靠记忆做一遍同类活用。</div>`}
 
 const APP_STATE_KEY='jpStudyStateV3';
+const EBBINGHAUS_STEPS=[10,24*60,3*24*60,7*24*60,15*24*60,30*24*60,60*24*60,90*24*60];
+const EBBINGHAUS_LABELS=['10分钟','1天','3天','7天','15天','30天','60天','90天'];
 function todayKey(ts=Date.now()){const d=new Date(ts);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 function loadState(){try{return JSON.parse(localStorage.getItem(APP_STATE_KEY)||'{}')}catch(e){return {}}}
 function saveState(st){localStorage.setItem(APP_STATE_KEY,JSON.stringify(st))}
-function ensureState(){const st=loadState();st.days=st.days||{};st.srs=st.srs||{};st.mistakes=st.mistakes||{};return st}
-function recordActivity(kind,ok=null){const st=ensureState(),k=todayKey();st.days[k]=st.days[k]||{grammar:0,vocab:0,review:0,shadow:0,correct:0,attempts:0};st.days[k][kind]=(st.days[k][kind]||0)+1;if(ok!==null){st.days[k].attempts++;if(ok)st.days[k].correct++}saveState(st);renderHomeStats()}
+function ensureState(){const st=loadState();st.days=st.days||{};st.srs=st.srs||{};st.mistakes=st.mistakes||{};st.notes=st.notes||{};st.microDays=st.microDays||{};st.goalDefaults=st.goalDefaults||{grammar:3,vocab:20};st.dailyGoals=st.dailyGoals||{};return st}
+function recordActivity(kind,ok=null){const st=ensureState(),k=todayKey();st.days[k]=st.days[k]||{grammar:0,vocab:0,review:0,shadow:0,correct:0,attempts:0};st.days[k][kind]=(st.days[k][kind]||0)+1;if(ok!==null){st.days[k].attempts++;if(ok)st.days[k].correct++}if(kind==='review'&&(st.days[k].review||0)>=5)st.microDays[k]=1;saveState(st);renderHomeStats()}
 function mistakeKey(type,id){return `${type}:${id}`}
 function recordMistake(type,id,label){const st=ensureState(),k=mistakeKey(type,id),m=st.mistakes[k]||{type,id,label,count:0,success:0};m.label=label;m.count++;m.last=Date.now();st.mistakes[k]=m;saveState(st);renderWrong()}
 function recordSuccess(type,id){const st=ensureState(),k=mistakeKey(type,id),m=st.mistakes[k];if(m){m.success=(m.success||0)+1;m.lastSuccess=Date.now();if(m.success>=3&&m.success>=m.count)delete st.mistakes[k];else st.mistakes[k]=m;saveState(st);renderWrong()}}
 function formatAgo(ts){if(!ts)return '—';const mins=Math.floor((Date.now()-ts)/60000);if(mins<1)return '刚刚';if(mins<60)return `${mins} 分钟前`;const h=Math.floor(mins/60);if(h<24)return `${h} 小时前`;return `${Math.floor(h/24)} 天前`}
 function currentStreak(){const st=ensureState();let d=new Date(),n=0;for(let i=0;i<366;i++){const k=todayKey(d.getTime()),x=st.days[k];if(x&&Object.values(x).some(v=>typeof v==='number'&&v>0)){n++;d.setDate(d.getDate()-1);continue}if(i===0){d.setDate(d.getDate()-1);continue}break}return n}
+function microStreak(){const st=ensureState();let d=new Date(),n=0;for(let i=0;i<366;i++){const k=todayKey(d.getTime());if((st.microDays[k]||0)>0){n++;d.setDate(d.getDate()-1);continue}if(i===0){d.setDate(d.getDate()-1);continue}break}return n}
 function reviewKey(type,id){return type==='grammar'?`grammar:${id}`:id}
 function isReviewEnrolled(type,id){const st=ensureState();return !!st.srs[reviewKey(type,id)]}
-function enrollReview(type,id,btn){const st=ensureState(),key=reviewKey(type,id);if(!st.srs[key])st.srs[key]={reps:0,interval:0,lastScore:null,enrolled:true,learnedAt:Date.now(),due:Date.now()};else{st.srs[key].enrolled=true;if(!st.srs[key].due)st.srs[key].due=Date.now()}saveState(st);if(btn){btn.textContent='✓ 已加入复习';btn.disabled=true;btn.classList.remove('primary');btn.classList.add('secondary')}reviewIndex=0;renderReview();renderHomeStats()}
+function estimateStage(interval=0){let best=0;for(let i=0;i<EBBINGHAUS_STEPS.length;i++){if(interval>=EBBINGHAUS_STEPS[i]*.8)best=i}return best}
+function enrollReview(type,id,btn){const st=ensureState(),key=reviewKey(type,id),firstDue=Date.now()+EBBINGHAUS_STEPS[0]*60000;if(!st.srs[key])st.srs[key]={reps:0,interval:EBBINGHAUS_STEPS[0],stage:0,lastScore:null,enrolled:true,learnedAt:Date.now(),due:firstDue};else{st.srs[key].enrolled=true;if(st.srs[key].stage==null)st.srs[key].stage=estimateStage(st.srs[key].interval||0);if(!st.srs[key].due)st.srs[key].due=firstDue}saveState(st);if(btn){btn.textContent='✓ 已加入复习';btn.disabled=true;btn.classList.remove('primary');btn.classList.add('secondary')}reviewIndex=0;reviewSessionStarted=false;renderGrammar();renderVocab();renderReview();renderHomeStats()}
 window.enrollReview=enrollReview;
-function migrateLegacyReviewState(){const st=ensureState();let changed=false;for(const [k,v] of Object.entries(st.srs)){if(v&&!v.enrolled){v.enrolled=true;st.srs[k]=v;changed=true}}try{const p=JSON.parse(localStorage.getItem('jpStudyPractice')||'{}');for(const k of Object.keys(p)){if(k.startsWith('grammar:')){const id=k.slice(8),rk=reviewKey('grammar',id);if(!st.srs[rk]){st.srs[rk]={reps:0,interval:0,lastScore:null,enrolled:true,learnedAt:p[k].updatedAt||Date.now(),due:Date.now()};changed=true}}else if(k.startsWith('vocab:')){const id=k.slice(6),rk=reviewKey('vocab',id);if(!st.srs[rk]){st.srs[rk]={reps:0,interval:0,lastScore:null,enrolled:true,learnedAt:p[k].updatedAt||Date.now(),due:Date.now()};changed=true}}}}catch(e){}if(changed)saveState(st)}
-function dueReviewItems(filter='ALL'){const st=ensureState(),now=Date.now(),items=[];for(const v of vocabData){const r=st.srs[reviewKey('vocab',v.id)];if(r&&r.enrolled&&(r.due||0)<=now&&(filter==='ALL'||filter==='vocab'))items.push({type:'vocab',id:v.id,data:v,due:r.due||0,lastScore:r.lastScore})}for(const g of grammarData){const r=st.srs[reviewKey('grammar',g.id)];if(r&&r.enrolled&&(r.due||0)<=now&&(filter==='ALL'||filter==='grammar'))items.push({type:'grammar',id:g.id,data:g,due:r.due||0,lastScore:r.lastScore})}return items.sort((a,b)=>(a.due-b.due)||((a.lastScore??-1)-(b.lastScore??-1)))}
-function nextReviewDue(filter='ALL'){const st=ensureState(),times=[];for(const v of vocabData){const r=st.srs[reviewKey('vocab',v.id)];if(r&&r.enrolled&&r.due>Date.now()&&(filter==='ALL'||filter==='vocab'))times.push(r.due)}for(const g of grammarData){const r=st.srs[reviewKey('grammar',g.id)];if(r&&r.enrolled&&r.due>Date.now()&&(filter==='ALL'||filter==='grammar'))times.push(r.due)}return times.length?Math.min(...times):null}
-function scoreSRS(type,id,score){const st=ensureState(),key=reviewKey(type,id),old=st.srs[key]||{reps:0,interval:0,enrolled:true};let mins;if(score===0)mins=10;else if(score===1)mins=24*60;else if(score===2)mins=Math.max(3*24*60,Math.round((old.interval||0)*1.7));else mins=Math.max(14*24*60,Math.round((old.interval||0)*2.4));const rec={...old,enrolled:true,reps:(old.reps||0)+1,interval:mins,lastScore:score,last:Date.now(),due:Date.now()+mins*60000};st.srs[key]=rec;saveState(st);recordActivity('review',score>=2);const label=type==='grammar'?(grammarData.find(v=>v.id===id)?.title||id):(vocabData.find(v=>v.id===id)?.word||id),mistakeType=type==='grammar'?'语法复习':'单词复习';if(score<=1)recordMistake(mistakeType,id,label);else recordSuccess(mistakeType,id);return mins}
+function noteKey(type,id){return `${type}:${id}`}
+function personalNote(type,id){return ensureState().notes[noteKey(type,id)]||''}
+function savePersonalNote(type,id,value){const st=ensureState();if((value||'').trim())st.notes[noteKey(type,id)]=value;else delete st.notes[noteKey(type,id)];saveState(st)}
+window.savePersonalNote=savePersonalNote;
+
+function migrateLegacyReviewState(){const st=ensureState();let changed=false;for(const [k,v] of Object.entries(st.srs)){if(v&&!v.enrolled){v.enrolled=true;changed=true}if(v&&v.stage==null){v.stage=estimateStage(v.interval||0);changed=true}st.srs[k]=v}try{const p=JSON.parse(localStorage.getItem('jpStudyPractice')||'{}');for(const k of Object.keys(p)){if(k.startsWith('grammar:')){const id=k.slice(8),rk=reviewKey('grammar',id);if(!st.srs[rk]){st.srs[rk]={reps:0,interval:EBBINGHAUS_STEPS[0],stage:0,lastScore:null,enrolled:true,learnedAt:p[k].updatedAt||Date.now(),due:Date.now()+EBBINGHAUS_STEPS[0]*60000};changed=true}}else if(k.startsWith('vocab:')){const id=k.slice(6),rk=reviewKey('vocab',id);if(!st.srs[rk]){st.srs[rk]={reps:0,interval:EBBINGHAUS_STEPS[0],stage:0,lastScore:null,enrolled:true,learnedAt:p[k].updatedAt||Date.now(),due:Date.now()+EBBINGHAUS_STEPS[0]*60000};changed=true}}}}catch(e){}if(changed)saveState(st)}
+function getReviewRecord(type,id){return ensureState().srs[reviewKey(type,id)]||null}
+function allReviewItems(filter='ALL'){const st=ensureState(),items=[];for(const v of vocabData){const r=st.srs[reviewKey('vocab',v.id)];if(r&&r.enrolled&&(filter==='ALL'||filter==='vocab'))items.push({type:'vocab',id:v.id,data:v,due:r.due||0,lastScore:r.lastScore,stage:r.stage??estimateStage(r.interval||0),record:r})}for(const g of grammarData){const r=st.srs[reviewKey('grammar',g.id)];if(r&&r.enrolled&&(filter==='ALL'||filter==='grammar'))items.push({type:'grammar',id:g.id,data:g,due:r.due||0,lastScore:r.lastScore,stage:r.stage??estimateStage(r.interval||0),record:r})}return items}
+function dueReviewItems(filter='ALL'){const now=Date.now();return allReviewItems(filter).filter(x=>x.due<=now).sort((a,b)=>((a.lastScore??-1)-(b.lastScore??-1))||(a.due-b.due))}
+function microReviewItems(filter='ALL',limit=5){const now=Date.now(),all=allReviewItems(filter),mist=ensureState().mistakes;const score=x=>{let n=0;if(x.due<=now)n+=1000+Math.min(300,(now-x.due)/60000);if((x.lastScore??3)<=1)n+=500;if(Object.values(mist).some(m=>m.id===x.id))n+=260;if(x.record?.learnedAt&&now-x.record.learnedAt<72*3600000)n+=180;if(x.record?.last&&now-x.record.last<7*86400000)n+=90;n+=Math.max(0,80-(x.stage||0)*10);return n};return [...all].sort((a,b)=>score(b)-score(a)).slice(0,limit)}
+function bonusReviewItems(filter='ALL',limit=5,excludeKeys=new Set()){const now=Date.now(),mist=ensureState().mistakes;const all=allReviewItems(filter).filter(x=>x.due>now&&!excludeKeys.has(reviewKey(x.type,x.id)));const score=x=>{let n=0;const until=Math.max(0,x.due-now);n+=Math.max(0,260-Math.min(260,until/3600000*12));if((x.lastScore??3)<=1)n+=420;if(Object.values(mist).some(m=>m.id===x.id))n+=240;if(x.record?.learnedAt&&now-x.record.learnedAt<72*3600000)n+=170;if(x.record?.last&&now-x.record.last<7*86400000)n+=80;n+=Math.max(0,70-(x.stage||0)*9);return n};return all.sort((a,b)=>score(b)-score(a)).slice(0,limit)}
+function buildReviewSession(filter='ALL'){const due=dueReviewItems(filter).map(x=>({...x,sessionKind:'due',sessionRetries:0}));const seen=new Set(due.map(x=>reviewKey(x.type,x.id))),need=Math.max(0,5-due.length);const bonus=bonusReviewItems(filter,need,seen).map(x=>({...x,sessionKind:'bonus',sessionRetries:0}));return [...due,...bonus]}
+function nextReviewDue(filter='ALL'){const times=allReviewItems(filter).map(x=>x.due).filter(t=>t>Date.now());return times.length?Math.min(...times):null}
+function nextSrsStage(old,score){const oldStage=old.stage??estimateStage(old.interval||0);if(score===0)return 0;if(score===1)return 1;if(score===2)return Math.min(EBBINGHAUS_STEPS.length-1,Math.max(2,oldStage+1));return Math.min(EBBINGHAUS_STEPS.length-1,Math.max(4,oldStage+2))}
+function nudgeGrammarReviewFromQuiz(id){const st=ensureState(),key=reviewKey('grammar',id),now=Date.now(),due=now+EBBINGHAUS_STEPS[0]*60000,old=st.srs[key]||{reps:0,interval:EBBINGHAUS_STEPS[0],stage:0,enrolled:true,learnedAt:now};old.enrolled=true;old.stage=0;old.interval=EBBINGHAUS_STEPS[0];old.lastScore=0;old.lastQuizMiss=now;old.due=Math.min(old.due||due,due);st.srs[key]=old;saveState(st);return old}
+function scoreSRS(type,id,score){const st=ensureState(),key=reviewKey(type,id),old=st.srs[key]||{reps:0,interval:0,stage:0,enrolled:true};const stage=nextSrsStage(old,score),mins=EBBINGHAUS_STEPS[stage];const rec={...old,enrolled:true,reps:(old.reps||0)+1,stage,interval:mins,lastScore:score,last:Date.now(),due:Date.now()+mins*60000};st.srs[key]=rec;saveState(st);recordActivity('review',score>=2);const label=type==='grammar'?(grammarData.find(v=>v.id===id)?.title||id):(vocabData.find(v=>v.id===id)?.word||id),mistakeType=type==='grammar'?'语法复习':'单词复习';if(score<=1)recordMistake(mistakeType,id,label);else recordSuccess(mistakeType,id);return {mins,stage}}
+function scoreMicroReview(type,id,score,wasDue){if(wasDue)return scoreSRS(type,id,score);const st=ensureState(),key=reviewKey(type,id),old=st.srs[key];if(!old)return {mins:0,stage:0,kept:true};if(score<=1)return scoreSRS(type,id,score);old.microHits=(old.microHits||0)+1;old.lastMicro=Date.now();st.srs[key]=old;saveState(st);recordActivity('review',true);return {mins:old.interval||0,stage:old.stage??estimateStage(old.interval||0),kept:true}}
+function completeMicroSession(){const st=ensureState(),k=todayKey();st.microDays[k]=(st.microDays[k]||0)+1;saveState(st);renderHomeStats()}
 function levelProgress(level){const st=ensureState(),p=JSON.parse(localStorage.getItem('jpStudyPractice')||'{}');const gs=grammarData.filter(x=>x.level===level),vs=vocabData.filter(x=>x.level===level);let done=0,total=gs.length+vs.length;for(const g of gs){const s=st.srs[reviewKey('grammar',g.id)],x=p[`grammar:${g.id}`];if((s&&s.lastScore>=2)||(x&&x.correct>0))done++}for(const v of vs){const s=st.srs[reviewKey('vocab',v.id)],x=p[`vocab:${v.id}`];if((s&&s.lastScore>=2)||(x&&x.correct>0))done++}return total?Math.round(done/total*100):0}
-function renderHomeStats(){const st=ensureState(),today=st.days[todayKey()]||{};const seven=[];let attempts=0,correct=0,d=new Date();for(let i=0;i<7;i++){const x=st.days[todayKey(d.getTime())]||{};attempts+=x.attempts||0;correct+=x.correct||0;d.setDate(d.getDate()-1)}const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val};set('homeStreak',currentStreak());set('homeGrammar',`${(today.grammar||0)} / 3`);set('homeVocab',`${(today.vocab||0)+(today.review||0)} / 20`);set('homeDue',dueReviewItems('ALL').length);set('homeAccuracy',attempts?`${Math.round(correct/attempts*100)}%`:'—');for(const lv of ['N5','N4','N3','N2']){const n=levelProgress(lv),bar=document.getElementById(`bar${lv}`),txt=document.getElementById(`progress${lv}`);if(bar)bar.style.width=n+'%';if(txt)txt.textContent=n+'%'}}
-function renderWrong(){const el=document.getElementById('wrongBody');if(!el)return;const st=ensureState(),rows=Object.values(st.mistakes).sort((a,b)=>(b.count||0)-(a.count||0)||(b.last||0)-(a.last||0));if(!rows.length){el.innerHTML='<tr><td colspan="5"><div class="empty-state">还没有错题。复习里做错的语法造句、单词读音和动词变形会自动出现在这里。</div></td></tr>';return}el.innerHTML=rows.map(m=>`<tr><td><b>${escapeHtml(m.label||m.id)}</b></td><td>${escapeHtml(m.type)}</td><td>${m.count||0}</td><td>${formatAgo(m.last)}</td><td><span class="pill ${(m.success||0)>=2?'good':(m.count||0)>=3?'warn':''}">${(m.success||0)>=2?'正在稳定':(m.count||0)>=3?'重点复习':'复习中'}</span></td></tr>`).join('')}
-window.exportStudyData=function(){const payload={version:3,exportedAt:new Date().toISOString(),state:ensureState(),practice:JSON.parse(localStorage.getItem('jpStudyPractice')||'{}'),conjugation:JSON.parse(localStorage.getItem('jpConjStats')||'{}'),quiz:JSON.parse(localStorage.getItem('jpGrammarQuizStats')||'{}'),settings:{voice:localStorage.getItem('jpPreferredVoice')||''}};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`japanese-study-backup-${todayKey()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-window.importStudyData=async function(file){if(!file)return;try{const x=JSON.parse(await file.text());if(x.state)localStorage.setItem(APP_STATE_KEY,JSON.stringify(x.state));if(x.practice)localStorage.setItem('jpStudyPractice',JSON.stringify(x.practice));if(x.conjugation)localStorage.setItem('jpConjStats',JSON.stringify(x.conjugation));if(x.quiz)localStorage.setItem('jpGrammarQuizStats',JSON.stringify(x.quiz));if(x.settings&&x.settings.voice)localStorage.setItem('jpPreferredVoice',x.settings.voice);alert('学习数据已导入。');location.reload()}catch(e){alert('导入失败：这不是有效的学习数据备份。')}}
-window.resetStudyData=function(){if(!confirm('确定清空所有学习记录、SRS 和错题吗？词库与语法内容不会删除。'))return;['jpStudyPractice','jpConjStats','jpGrammarQuizStats',APP_STATE_KEY].forEach(k=>localStorage.removeItem(k));renderHomeStats();renderWrong();renderConjStats();reviewIndex=0;renderReview()}
+function learnedTodayCounts(){const start=new Date();start.setHours(0,0,0,0);const out={grammar:0,vocab:0};for(const x of allReviewItems('ALL')){if((x.record?.learnedAt||0)>=start.getTime())out[x.type]++}return out}
+function learnedTodayCount(){const x=learnedTodayCounts();return x.grammar+x.vocab}
+function getTodayGoals(){const st=ensureState(),k=todayKey(),x=st.dailyGoals[k]||st.goalDefaults||{grammar:3,vocab:20};return {grammar:Math.max(0,Number(x.grammar)||0),vocab:Math.max(0,Number(x.vocab)||0)}}
+window.saveTodayGoals=function(asDefault=false){const g=Math.max(0,Math.min(50,parseInt(document.getElementById('goalGrammarInput')?.value||0,10)||0)),v=Math.max(0,Math.min(200,parseInt(document.getElementById('goalVocabInput')?.value||0,10)||0)),st=ensureState();st.dailyGoals[todayKey()]={grammar:g,vocab:v};if(asDefault)st.goalDefaults={grammar:g,vocab:v};saveState(st);const badge=document.getElementById('goalSavedBadge');if(badge){badge.textContent=asDefault?'✓ 已保存为默认':'✓ 今天已保存';setTimeout(()=>{badge.textContent='可自定义'},1400)}renderHomeStats()}
+function formatUntil(ts){if(!ts)return '—';const diff=ts-Date.now();if(diff<=0)return '现在';const m=Math.ceil(diff/60000);if(m<60)return `${m}分钟`;const h=Math.ceil(m/60);if(h<24)return `${h}小时`;const d=Math.ceil(h/24);return `${d}天`}
+function reviewForecast(){const now=Date.now(),items=allReviewItems('ALL');let nowN=0,h24=0,d3=0,d7=0,next=null;for(const x of items){const due=x.due||0;if(due<=now)nowN++;else{if(next==null||due<next)next=due;if(due<=now+86400000)h24++;if(due<=now+3*86400000)d3++;if(due<=now+7*86400000)d7++}}return {now:nowN,h24,d3,d7,next}}
+function topWeakItems(limit=4){const rows=Object.values(ensureState().mistakes).sort((a,b)=>((b.count||0)-(b.success||0))-((a.count||0)-(a.success||0))||(b.last||0)-(a.last||0));return rows.slice(0,limit)}
+function renderHomeFocus(){
+ const el=document.getElementById('homeFocus');if(!el)return;
+ const f=reviewForecast(),weak=topWeakItems(20).length,habitDone=(ensureState().microDays[todayKey()]||0)>0;
+ let title='',text='',actions='';
+ if(f.now>0){
+   title=`先处理 ${f.now} 项到期内容`;
+   text='进入今日复习后，系统会连续给题；如果到期项很少，会自动补几张薄弱/近期内容，不会做一题就散场。';
+   actions=`<button class="primary" onclick="startStandardReview()">开始今日复习</button>`;
+ }else if(weak>=3){
+   title='今天适合补薄弱项';
+   text=`目前有 ${weak} 个错题/弱项。今日复习会自动优先抽取其中一部分，也可以直接打开错题本查看。`;
+   actions=`<button class="primary" onclick="startStandardReview()">开始今日复习</button><button class="secondary" onclick="goSection('wrong')">看薄弱项</button>`;
+ }else if(!habitDone){
+   title='做一小轮主动回忆';
+   text='现在没有到期压力。今日复习会自动抽少量近期或薄弱内容，完成至少 5 次提取就算守住今天的记忆习惯。';
+   actions=`<button class="primary" onclick="startStandardReview()">开始今日复习</button><button class="secondary" onclick="goSection('shadowing')">去跟读</button>`;
+ }else{
+   title='今天的复习状态很干净';
+   text='可以按你自己设的目标学新语法/单词，或者直接做跟读。没有必要为了数字硬学。';
+   actions=`<button class="primary" onclick="goSection('grammar')">学语法</button><button class="secondary" onclick="goSection('vocab')">学单词</button><button class="secondary" onclick="goSection('shadowing')">去跟读</button>`;
+ }
+ el.innerHTML=`<div class="dashboard-label">现在最值得做</div><div class="focus-title">${title}</div><div class="focus-text">${text}</div><div class="focus-actions">${actions}</div>`;
+}
+function renderReviewRadar(){const f=reviewForecast(),set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};set('radarNow',f.now);set('radar24h',f.h24);set('radar3d',f.d3);set('radar7d',f.d7);const tip=document.getElementById('radarTip');if(tip){if(f.now>=30)tip.innerHTML='<b>复习积压偏高。</b> 今天建议暂停新增，先把到期项降下来。';else if(f.d3>=50)tip.innerHTML='<b>未来 3 天会比较密。</b> 今天的新学目标可以保守一点，避免后面堆积。';else if(f.now===0&&f.d3<20)tip.innerHTML='<b>复习压力健康。</b> 可以按自己的节奏学一点新内容。';else tip.innerHTML='<b>复习量正常。</b> 优先处理到期内容即可，不必一次做完未来卡片。'}}
+function renderHomeWeak(){const el=document.getElementById('homeWeakList');if(!el)return;const rows=topWeakItems(4);if(!rows.length){el.innerHTML='<div class="empty-state" style="padding:22px">暂时没有明显薄弱项。继续正常复习即可。</div>';return}el.innerHTML=rows.map(m=>`<div class="weak-row"><div><b>${escapeHtml(m.label||m.id)}</b><small>${escapeHtml(m.type)} · 错 ${m.count||0} 次${m.success?` · 后来答对 ${m.success} 次`:''}</small></div><span class="pill ${(m.count||0)>=3?'warn':''}">${(m.count||0)>=3?'重点':'复习中'}</span></div>`).join('')}
+function renderMicroHabit(){const st=ensureState(),dots=document.getElementById('microHabitDots');if(dots){let html='',d=new Date();d.setDate(d.getDate()-6);for(let i=0;i<7;i++){const k=todayKey(d.getTime());html+=`<span class="habit-dot ${(st.microDays[k]||0)>0?'on':''}" title="${k}"></span>`;d.setDate(d.getDate()+1)}dots.innerHTML=html}const n=microStreak(),ms=document.getElementById('microStreak'),todayReviews=st.days[todayKey()]?.review||0;if(ms)ms.textContent=`连续 ${n} 天`;const tip=document.getElementById('microHabitTip');if(tip)tip.textContent=(st.microDays[todayKey()]||0)>0?`今天已完成 ${todayReviews} 次主动提取，习惯达标。`: `今天已完成 ${Math.min(todayReviews,5)}/5 次主动提取；不用另开微复习。`}
+function renderHomeStats(){const st=ensureState();let attempts=0,correct=0,d=new Date();for(let i=0;i<7;i++){const x=st.days[todayKey(d.getTime())]||{};attempts+=x.attempts||0;correct+=x.correct||0;d.setDate(d.getDate()-1)}const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val},forecast=reviewForecast(),weak=topWeakItems(999).length,learned=learnedTodayCounts(),goals=getTodayGoals();set('homeStreak',currentStreak());set('homeDue',forecast.now);set('homeNextReview',forecast.now?'现在':formatUntil(forecast.next));set('homeWeak',weak);set('homeAccuracy',attempts?`${Math.round(correct/attempts*100)}%`:'—');const gi=document.getElementById('goalGrammarInput'),vi=document.getElementById('goalVocabInput');if(gi&&document.activeElement!==gi)gi.value=goals.grammar;if(vi&&document.activeElement!==vi)vi.value=goals.vocab;set('goalGrammarProgress',goals.grammar?`${learned.grammar} / ${goals.grammar}`:`${learned.grammar} / 自由`);set('goalVocabProgress',goals.vocab?`${learned.vocab} / ${goals.vocab}`:`${learned.vocab} / 自由`);const gb=document.getElementById('goalGrammarBar'),vb=document.getElementById('goalVocabBar');if(gb)gb.style.width=(goals.grammar?Math.min(100,learned.grammar/goals.grammar*100):(learned.grammar?100:0))+'%';if(vb)vb.style.width=(goals.vocab?Math.min(100,learned.vocab/goals.vocab*100):(learned.vocab?100:0))+'%';for(const lv of ['N5','N4','N3','N2']){const n=levelProgress(lv),bar=document.getElementById(`bar${lv}`),txt=document.getElementById(`progress${lv}`);if(bar)bar.style.width=n+'%';if(txt)txt.textContent=n+'%'}renderHomeFocus();renderReviewRadar();renderHomeWeak();renderMicroHabit()}
+function renderWrong(){const el=document.getElementById('wrongBody');if(!el)return;const st=ensureState(),rows=Object.values(st.mistakes).sort((a,b)=>(b.count||0)-(a.count||0)||(b.last||0)-(a.last||0));if(!rows.length){el.innerHTML='<tr><td colspan="5"><div class="empty-state">还没有错题。复习里做错的语法造句、单词读音、JLPT 快练和动词变形都会自动出现在这里。</div></td></tr>';return}el.innerHTML=rows.map(m=>`<tr><td><b>${escapeHtml(m.label||m.id)}</b></td><td>${escapeHtml(m.type)}</td><td>${m.count||0}</td><td>${formatAgo(m.last)}</td><td><span class="pill ${(m.success||0)>=2?'good':(m.count||0)>=3?'warn':''}">${(m.success||0)>=2?'正在稳定':(m.count||0)>=3?'重点复习':'复习中'}</span></td></tr>`).join('')}
+window.exportStudyData=function(){const payload={version:3,exportedAt:new Date().toISOString(),state:ensureState(),practice:JSON.parse(localStorage.getItem('jpStudyPractice')||'{}'),conjugation:JSON.parse(localStorage.getItem('jpConjStats')||'{}'),quiz:JSON.parse(localStorage.getItem('jpGrammarQuizStats')||'{}'),conjRetry:loadConjRetry(),settings:{voice:localStorage.getItem('jpPreferredVoice')||''}};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`japanese-study-backup-${todayKey()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+window.importStudyData=async function(file){if(!file)return;try{const x=JSON.parse(await file.text());if(x.state)localStorage.setItem(APP_STATE_KEY,JSON.stringify(x.state));if(x.practice)localStorage.setItem('jpStudyPractice',JSON.stringify(x.practice));if(x.conjugation)localStorage.setItem('jpConjStats',JSON.stringify(x.conjugation));if(x.quiz)localStorage.setItem('jpGrammarQuizStats',JSON.stringify(x.quiz));if(x.conjRetry)saveConjRetry(x.conjRetry);if(x.settings&&x.settings.voice)localStorage.setItem('jpPreferredVoice',x.settings.voice);alert('学习数据已导入。');location.reload()}catch(e){alert('导入失败：这不是有效的学习数据备份。')}}
+window.resetStudyData=function(){if(!confirm('确定清空所有学习记录、SRS 和错题吗？词库与语法内容不会删除。'))return;['jpStudyPractice','jpConjStats','jpGrammarQuizStats','jpConjRetry',APP_STATE_KEY].forEach(k=>localStorage.removeItem(k));renderHomeStats();renderWrong();renderConjStats();reviewIndex=0;renderReview()}
 function defaultGrammarPractice(x){const key=x.practiceKey||x.title.replace(/^〜/,'').replace(/[（）()]/g,'');return {prompt:`请用「${x.title}」造一个自然的日语句子。`,hint:`例：${x.examples[0][0]}`,target:new RegExp(key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),mistakes:[]}}
 
 const grammarPractice={
@@ -567,10 +698,9 @@ let reviewIndex=0;
 let gFilter='ALL',vFilter='ALL';
 
 const sections=[...document.querySelectorAll('.section')];
-document.querySelectorAll('.nav button').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  sections.forEach(s=>s.classList.remove('active'));document.getElementById(btn.dataset.target).classList.add('active');window.scrollTo(0,0);
-}));
+function goSection(target){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.target===target));sections.forEach(s=>s.classList.toggle('active',s.id===target));window.scrollTo(0,0);if(target==='review'){if(!reviewSessionStarted||reviewIndex>=reviewDeck.length)beginReviewSession();renderReview()}}
+window.goSection=goSection;
+document.querySelectorAll('.nav button').forEach(btn=>btn.addEventListener('click',()=>goSection(btn.dataset.target)));
 
 
 
@@ -618,15 +748,16 @@ function wordImage(x){
 }
 
 function stars(n){return '★'.repeat(n)+'☆'.repeat(5-n)}
+function learnedBadge(type,id){const r=getReviewRecord(type,id);if(!r||!r.enrolled)return '';const stage=r.stage??estimateStage(r.interval||0),due=(r.due||0)<=Date.now();return `<span class="pill learned-badge ${due?'due':'good'}">✓ 已学${due?' · 待复习':` · ${EBBINGHAUS_LABELS[stage]||'复习中'}`}</span>`}
 function renderGrammar(){
  const q=(document.getElementById('grammarSearch').value||'').trim().toLowerCase();
  const rows=grammarData.filter(x=>(gFilter==='ALL'||x.level===gFilter)&&(`${x.title} ${x.meaning}`.toLowerCase().includes(q)));
- document.getElementById('grammarList').innerHTML=rows.map(x=>`<div class="item"><div><div class="item-title">${x.title}</div><div class="item-sub">${x.meaning}</div><div class="tags"><span class="pill dark">${x.level}</span><span class="pill">重要度 ${stars(x.importance)}</span><span class="pill">JLPT 高频</span></div></div><button class="open-btn" onclick="openGrammar('${x.id}')">查看用法</button></div>`).join('')||'<div class="card">没有匹配内容。</div>';
+ document.getElementById('grammarList').innerHTML=rows.map(x=>{const learned=isReviewEnrolled('grammar',x.id);return `<div class="item ${learned?'learned-item':''}"><div><div class="item-title">${x.title}</div><div class="item-sub">${x.meaning}</div><div class="tags"><span class="pill dark">${x.level}</span><span class="pill">重要度 ${stars(x.importance)}</span><span class="pill">JLPT 高频</span>${learnedBadge('grammar',x.id)}</div></div><button class="open-btn" onclick="openGrammar('${x.id}')">查看用法</button></div>`}).join('')||'<div class="card">没有匹配内容。</div>';
 }
 function renderVocab(){
  const q=(document.getElementById('vocabSearch').value||'').trim().toLowerCase();
  const rows=vocabData.filter(x=>(vFilter==='ALL'||x.level===vFilter)&&(`${x.word} ${x.reading} ${x.meaning}`.toLowerCase().includes(q)));
- document.getElementById('vocabList').innerHTML=rows.map(x=>`<div class="item vocab-list-row"><div class="word-thumb"><img src="${wordImage(x)}" onerror="this.onerror=null;this.src=wordImage({imageLabel:'图片暂时无法加载'})" alt="${escapeHtml(x.word)} 相关实景图"></div><div><div class="word-row"><div class="item-title">${x.word} <span style="font-size:14px;color:#777;font-weight:600">${x.reading}</span></div><button class="audio-btn" title="朗读 ${x.word}" onclick="speakText('${x.word.replace(/'/g,"\\'")}')">🔊</button></div><div class="item-sub">${x.meaning}</div><div class="tags"><span class="pill dark">${x.level}</span><span class="pill">${x.pos}</span><span class="pill">重要度 ${stars(x.importance)}</span></div></div><button class="open-btn" onclick="openVocab('${x.id}')">详细用法</button></div>`).join('')||'<div class="card">没有匹配内容。</div>';
+ document.getElementById('vocabList').innerHTML=rows.map(x=>{const learned=isReviewEnrolled('vocab',x.id);return `<div class="item vocab-list-row ${learned?'learned-item':''}"><div class="word-thumb"><img src="${wordImage(x)}" onerror="this.onerror=null;this.src=wordImage({imageLabel:'图片暂时无法加载'})" alt="${escapeHtml(x.word)} 相关实景图"></div><div><div class="word-row"><div class="item-title">${x.word} <span style="font-size:14px;color:#777;font-weight:600">${x.reading}</span></div><button class="audio-btn" title="朗读 ${x.word}" onclick="speakText('${x.word.replace(/'/g,"\'")}')">🔊</button></div><div class="item-sub">${x.meaning}</div><div class="tags"><span class="pill dark">${x.level}</span><span class="pill">${x.pos}</span><span class="pill">重要度 ${stars(x.importance)}</span>${learnedBadge('vocab',x.id)}</div></div><button class="open-btn" onclick="openVocab('${x.id}')">详细用法</button></div>`}).join('')||'<div class="card">没有匹配内容。</div>';
 }
 
 document.getElementById('grammarSearch').addEventListener('input',renderGrammar);document.getElementById('vocabSearch').addEventListener('input',renderVocab);
@@ -647,7 +778,7 @@ window.openGrammar=function(id){const x=grammarData.find(a=>a.id===id),enrolled=
  <div class="detail-block"><h3>相似语法 / 易错点</h3><p>${x.compare}</p></div>
  <div class="detail-block"><h3>JLPT 怎么考</h3><p>${x.exam}</p></div>
  <div class="detail-block"><h3>现实里怎么说</h3><p>${x.real}</p></div>
- <div class="practice-block"><div class="practice-head"><div><div class="practice-label">学习完成后</div><h3 style="margin-top:10px">把这个语法放进复习计划</h3></div><span class="pill">复习时再造句</span></div><p>语法库只负责理解和看例句。加入复习后，到期时会在「复习」里要求你自己造句，再根据结果安排下一次出现。</p><button class="${enrolled?'secondary':'primary'}" ${enrolled?'disabled':''} onclick="enrollReview('grammar','${id}',this)">${enrolled?'✓ 已加入复习':'学过了 · 加入复习'}</button></div>`) };
+ <div class="detail-block"><h3>我的记忆钩子</h3><textarea class="note-box" placeholder="写下你自己的理解、易错点或一个私人例子……" oninput="savePersonalNote('grammar','${id}',this.value)">${escapeHtml(personalNote('grammar',id))}</textarea><div class="note-help">自己的话通常比抄解释更容易记住。这里只保存在你的浏览器里。</div></div><div class="practice-block"><div class="practice-head"><div><div class="practice-label">学习完成后</div><h3 style="margin-top:10px">把这个语法放进复习计划</h3></div><span class="pill">10 分钟后首次复习</span></div><p>语法库只负责理解和看例句。加入后按艾宾浩斯节点进入复习；真正造句只会出现在复习中心。</p><button class="${enrolled?'secondary':'primary'}" ${enrolled?'disabled':''} onclick="enrollReview('grammar','${id}',this)">${enrolled?'✓ 已加入复习':'学过了 · 加入复习'}</button></div>`) };
 window.openVocab=function(id){const x=vocabData.find(a=>a.id===id),enrolled=isReviewEnrolled('vocab',id);showDrawer(`
  <div class="drawer-head"><div><span class="pill dark">${x.level}</span><div class="vocab-hero"><div class="vocab-hero-image"><img src="${wordImage(x)}" onerror="this.onerror=null;this.src=wordImage({imageLabel:'图片暂时无法加载'})" alt="${escapeHtml(x.word)} 相关实景图"></div><div><div class="word-row"><div class="detail-title" style="margin:0">${x.word}</div><button class="audio-btn" onclick="speakText('${x.word.replace(/'/g,"\'")}')" title="朗读单词">🔊</button></div><div class="detail-reading">${x.reading} · ${x.pos}</div><div class="practice-tip" style="margin-top:9px">图片联想：${x.imageLabel}</div>${x.imagePage?`<div class="image-credit"><a href="${x.imagePage}" target="_blank" rel="noopener">实景图片 · Unsplash</a></div>`:''}</div></div></div><button class="close" onclick="closeDrawer()">×</button></div>
  <div class="detail-block"><h3>核心意思</h3><p>${x.meaning}</p><div class="pill">重要度 ${stars(x.importance)}</div></div>
@@ -655,7 +786,7 @@ window.openVocab=function(id){const x=vocabData.find(a=>a.id===id),enrolled=isRe
  <div class="detail-block"><h3>自然例句 · 可朗读</h3>${x.examples.map(e=>`<div class="example"><div class="example-top"><div class="jp">${e[0]}</div><button class="audio-btn" onclick="speakText('${e[0].replace(/'/g,"\'")}')" title="朗读例句">🔊</button></div>${e[2]?`<div class="kana-reading">${e[2]}</div>`:''}<div class="cn">${e[1]}</div></div>`).join('')}</div>
  <div class="detail-block"><h3>使用说明</h3><p>${x.note}</p></div>
  <div class="detail-block"><h3>相似词区别</h3><div class="callout">${x.compare}</div></div>
- <div class="practice-block"><div class="practice-head"><div><div class="practice-label">学习完成后</div><h3 style="margin-top:10px">把这个单词放进复习计划</h3></div><span class="pill">复习时再写读音</span></div><p>单词库只负责学习读音、含义、搭配和例句。真正的假名默写会在「复习」到期时出现。</p><button class="${enrolled?'secondary':'primary'}" ${enrolled?'disabled':''} onclick="enrollReview('vocab','${id}',this)">${enrolled?'✓ 已加入复习':'学过了 · 加入复习'}</button></div>`) };
+ <div class="detail-block"><h3>我的记忆钩子</h3><textarea class="note-box" placeholder="写一个联想、自己的例句、容易混淆的词……" oninput="savePersonalNote('vocab','${id}',this.value)">${escapeHtml(personalNote('vocab',id))}</textarea><div class="note-help">建议只写 1～2 行：越像你自己的话，复习时越有用。</div></div><div class="practice-block"><div class="practice-head"><div><div class="practice-label">学习完成后</div><h3 style="margin-top:10px">把这个单词放进复习计划</h3></div><span class="pill">10 分钟后首次复习</span></div><p>单词库只负责学习读音、含义、搭配和例句。加入后按艾宾浩斯节点复习；假名默写只会出现在复习中心。</p><button class="${enrolled?'secondary':'primary'}" ${enrolled?'disabled':''} onclick="enrollReview('vocab','${id}',this)">${enrolled?'✓ 已加入复习':'学过了 · 加入复习'}</button></div>`) };
 
 function localGrammarCheck(id,raw){
  const x=grammarData.find(a=>a.id===id),cfg=grammarPractice[id]||defaultGrammarPractice(x),s=normalizeJP(raw);
@@ -742,23 +873,33 @@ document.querySelectorAll('[data-sfilter]').forEach(b=>b.addEventListener('click
 document.querySelectorAll('[data-stype]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-stype]').forEach(x=>x.classList.remove('active'));b.classList.add('active');shadowTypeFilter=b.dataset.stype;renderShadowLibrary()}));
 
 let reviewFilter='ALL';
+let reviewSessionStarted=false;
+let reviewSessionDueCount=0;
+let reviewSessionBonusCount=0;
 let currentReviewItem=null;
 let reviewAnswered=false;
 function reviewIntervalLabel(mins){if(mins<60)return `${mins} 分钟后`;if(mins<24*60)return `${Math.round(mins/60)} 小时后`;const d=Math.round(mins/(24*60));return `${d} 天后`}
 function showReviewScores(){const el=document.getElementById('scoreActions');if(el)el.style.display='flex'}
 function hideReviewScores(){const el=document.getElementById('scoreActions');if(el)el.style.display='none'}
-function renderReview(){reviewDeck=dueReviewItems(reviewFilter);if(reviewIndex>=reviewDeck.length)reviewIndex=0;currentReviewItem=reviewDeck[reviewIndex]||null;reviewAnswered=false;hideReviewScores();const card=document.getElementById('reviewCard'),dueLabel=document.getElementById('reviewDueLabel');if(dueLabel)dueLabel.textContent=` · 当前到期 ${reviewDeck.length} 项`;
- if(!currentReviewItem){const next=nextReviewDue(reviewFilter),nextTxt=next?`下一项将在 ${formatAgoFuture(next)} 到期。`:'还没有加入复习的内容。先去单词库或语法库学习，然后点「学过了 · 加入复习」。';card.innerHTML=`<div style="font-size:42px;margin-bottom:14px">✓</div><h2>今天这一组复习完成了</h2><p class="muted" style="max-width:520px">${nextTxt}</p>`;return}
- const {type,data:x}=currentReviewItem;
- if(type==='vocab')card.innerHTML=`<div class="pill">${x.level} · 单词复习</div><div class="review-image" style="margin-top:18px"><img src="${wordImage(x)}" onerror="this.onerror=null;this.src=wordImage({imageLabel:'图片暂时无法加载'})" alt="${escapeHtml(x.word)} 相关实景图"></div><div class="review-main">${x.word}</div><div class="muted" style="margin-top:8px">先不要看答案，自己写出假名。</div><input id="reviewVocabInput" class="kana-input" lang="ja" autocomplete="off" spellcheck="false" placeholder="输入平假名或片假名…" style="margin-top:22px" onkeydown="if(event.key==='Enter')checkReviewVocab()"><div class="practice-actions"><button class="primary" onclick="checkReviewVocab()">检查读音</button><button class="secondary" onclick="revealReviewItem()">不会 · 显示答案</button><button class="secondary" onclick="speakText('${x.word.replace(/'/g,"\\'")}')">只听发音</button></div><div id="reviewTaskFeedback" class="feedback"></div><div id="reviewAnswer" class="review-answer"></div>`;
- else{const p=grammarPractice[x.id]||defaultGrammarPractice(x);card.innerHTML=`<div class="pill">${x.level} · 语法复习</div><div class="review-main" style="font-size:34px">${x.title}</div><div class="review-reading" style="margin-top:10px">${x.meaning}</div><div class="callout" style="margin-top:18px;text-align:left"><b>接续：</b>${x.connection}</div><div style="width:100%;text-align:left;margin-top:22px"><b>请自己造一句：</b><div class="practice-tip" style="margin-top:6px">${p.prompt}</div></div><textarea id="reviewGrammarInput" class="practice-input" lang="ja" autocomplete="off" spellcheck="false" placeholder="输入日语句子…" style="width:100%;margin-top:12px" onkeydown="if((event.ctrlKey||event.metaKey)&&event.key==='Enter')checkReviewGrammar()"></textarea><div class="practice-actions"><button class="primary" onclick="checkReviewGrammar()">判断这句话</button><button class="secondary" onclick="revealReviewItem()">不会 · 看参考</button></div><div id="reviewTaskFeedback" class="feedback"></div><div id="reviewAnswer" class="review-answer"></div>`}
+function setReviewModeUI(){document.getElementById('standardReviewBtn')?.classList.add('active')}
+function renderCurve(stage=null){const box=document.getElementById('memoryCurve'),lab=document.getElementById('curveStageLabel');if(box)box.innerHTML=EBBINGHAUS_LABELS.map((x,i)=>`<div class="curve-step ${stage===i?'active':''}"><span class="curve-dot"></span>${x}</div>`).join('');if(lab)lab.textContent=stage==null?'当前节点 —':`当前节点 ${stage+1}/${EBBINGHAUS_LABELS.length} · ${EBBINGHAUS_LABELS[stage]}`}
+function reviewLoadHint(){const el=document.getElementById('reviewLoadHint');if(!el)return;const due=dueReviewItems('ALL').length;if(due>=30){el.className='overdue-callout';el.innerHTML=`今天有 <b>${due}</b> 项到期。先清复习，不建议再学新内容；每完成 10 项就休息 1～2 分钟。`}else if(due>=12){el.className='overdue-callout';el.innerHTML=`今天有 <b>${due}</b> 项到期。建议先复习，再把新学控制在 3～6 项。`}else{el.className='overdue-callout good';el.innerHTML=due?`今天有 <b>${due}</b> 项到期。今日复习会把它们排在前面，并在数量太少时补几张巩固卡。`:'今天没有硬性到期任务。系统会自动抽少量薄弱/近期内容做一小轮巩固，不需要单独开“微复习”。'}}
+function beginReviewSession(){reviewDeck=buildReviewSession(reviewFilter);reviewIndex=0;reviewSessionStarted=true;reviewSessionDueCount=reviewDeck.filter(x=>x.sessionKind==='due').length;reviewSessionBonusCount=reviewDeck.filter(x=>x.sessionKind==='bonus').length}
+window.startStandardReview=function(){beginReviewSession();goSection('review')}
+function sessionRepeatItem(item,result){const rec=getReviewRecord(item.type,item.id);return {...item,due:rec?.due||item.due,stage:rec?.stage??result.stage,lastScore:rec?.lastScore,record:rec,sessionKind:'repeat',sessionRepeat:true,sessionRetries:(item.sessionRetries||0)+1}}
+function reviewItemLabel(item){return item.type==='grammar'?(item.data.title||item.id):(item.data.word||item.id)}
+function renderReview(){setReviewModeUI();reviewLoadHint();if(!reviewSessionStarted)beginReviewSession();currentReviewItem=reviewDeck[reviewIndex]||null;reviewAnswered=false;hideReviewScores();const card=document.getElementById('reviewCard'),dueLabel=document.getElementById('reviewDueLabel');if(dueLabel){const repeats=reviewDeck.filter(x=>x.sessionKind==='repeat').length;dueLabel.textContent=` · 本轮 ${reviewDeck.length} 项（到期 ${reviewSessionDueCount} + 巩固 ${reviewSessionBonusCount}${repeats?` + 回看 ${repeats}`:''}）`}
+ if(!currentReviewItem){renderCurve(null);const next=nextReviewDue(reviewFilter),nextTxt=next?`下一次正式复习节点在 ${formatAgoFuture(next)}。`:'目前没有新的正式复习节点。';card.innerHTML=`<div style="font-size:42px;margin-bottom:14px">✓</div><h2>这一轮完成了</h2><p class="muted" style="max-width:580px">${nextTxt} 如果刚才有“完全忘了 / 有印象”的内容，它们已经在本轮稍后回看过；10 分钟或 1 天是下一次正式节点，不需要现在坐着等。</p><div class="practice-actions"><button class="secondary" onclick="startStandardReview()">再巩固一轮</button><button class="secondary" onclick="goSection('grammar')">去学新语法</button><button class="secondary" onclick="goSection('vocab')">去学新单词</button></div>`;renderHomeStats();return}
+ const {type,data:x,stage,lastScore}=currentReviewItem;renderCurve(stage??0);const stageCls=(lastScore??2)<=1?'weak':(stage??0)>=4?'strong':'';const kindLabel=currentReviewItem.sessionKind==='bonus'?'额外巩固':currentReviewItem.sessionKind==='repeat'?'本轮回看':'到期复习';const meta=`<div class="review-meta"><span class="pill memory-stage ${stageCls}">记忆节点 ${EBBINGHAUS_LABELS[stage??0]||'10分钟'}</span><span class="pill">${kindLabel}</span><span class="review-progress">第 ${reviewIndex+1}/${reviewDeck.length} 项</span></div>`;
+ if(type==='vocab')card.innerHTML=`${meta}<div class="pill">${x.level} · 单词复习</div><div class="review-image" style="margin-top:18px"><img src="${wordImage(x)}" onerror="this.onerror=null;this.src=wordImage({imageLabel:'图片暂时无法加载'})" alt="${escapeHtml(x.word)} 相关实景图"></div><div class="review-main">${x.word}</div><div class="muted" style="margin-top:8px">先不要看答案，自己写出假名。能写出来，比“看着眼熟”更可靠。</div><input id="reviewVocabInput" class="kana-input" lang="ja" autocomplete="off" spellcheck="false" placeholder="输入平假名或片假名…" style="margin-top:22px" onkeydown="if(event.key==='Enter')checkReviewVocab()"><div class="practice-actions"><button class="primary" onclick="checkReviewVocab()">检查读音</button><button class="secondary" onclick="revealReviewItem()">不会 · 显示答案</button><button class="secondary" onclick="speakText('${x.word.replace(/'/g,"\'")}')">只听发音</button></div><div id="reviewTaskFeedback" class="feedback"></div><div id="reviewAnswer" class="review-answer"></div>`;
+ else{const p=grammarPractice[x.id]||defaultGrammarPractice(x);card.innerHTML=`${meta}<div class="pill">${x.level} · 语法复习</div><div class="review-main" style="font-size:34px">${x.title}</div><div class="review-reading" style="margin-top:10px">${x.meaning}</div><div class="callout" style="margin-top:18px;text-align:left"><b>接续：</b>${x.connection}</div><div style="width:100%;text-align:left;margin-top:22px"><b>请自己造一句：</b><div class="practice-tip" style="margin-top:6px">${p.prompt}</div></div><textarea id="reviewGrammarInput" class="practice-input" lang="ja" autocomplete="off" spellcheck="false" placeholder="输入日语句子…" style="width:100%;margin-top:12px" onkeydown="if((event.ctrlKey||event.metaKey)&&event.key==='Enter')checkReviewGrammar()"></textarea><div class="practice-actions"><button class="primary" onclick="checkReviewGrammar()">判断这句话</button><button class="secondary" onclick="revealReviewItem()">不会 · 看参考</button></div><div id="reviewTaskFeedback" class="feedback"></div><div id="reviewAnswer" class="review-answer"></div>`}
 }
 function formatAgoFuture(ts){const mins=Math.max(1,Math.ceil((ts-Date.now())/60000));if(mins<60)return `${mins} 分钟后`;const h=Math.ceil(mins/60);if(h<24)return `${h} 小时后`;return `${Math.ceil(h/24)} 天后`}
-window.checkReviewVocab=function(){if(!currentReviewItem||currentReviewItem.type!=='vocab')return;const x=currentReviewItem.data,input=document.getElementById('reviewVocabInput'),box=document.getElementById('reviewTaskFeedback'),ans=document.getElementById('reviewAnswer'),raw=(input?.value||'').trim();if(!raw){box.className='feedback show neutral';box.innerHTML='<b>先写一个读音。</b>';return}const ok=kataToHira(raw)===kataToHira(x.reading);box.className=`feedback show ${ok?'good':'bad'}`;box.innerHTML=ok?`<b>正解！👏</b> 「${x.word}」读作 ${x.reading}。`:`<b>读音不对。</b> 你写的是「${escapeHtml(raw)}」，正确读音是 <span class="answer-chip">${x.reading}</span>。`;ans.classList.add('show');ans.innerHTML=`<h3>${x.meaning}</h3><p><b>高频搭配：</b>${x.collocations.slice(0,3).join('；')}</p><p class="muted">${x.note}</p>`;savePractice('vocab',x.id,ok,raw);reviewAnswered=true;showReviewScores()}
-window.checkReviewGrammar=function(){if(!currentReviewItem||currentReviewItem.type!=='grammar')return;const x=currentReviewItem.data,input=document.getElementById('reviewGrammarInput'),box=document.getElementById('reviewTaskFeedback'),ans=document.getElementById('reviewAnswer'),raw=(input?.value||'').trim();if(!raw){box.className='feedback show neutral';box.innerHTML='<b>先写一句再判断。</b>';return}const result=localGrammarCheck(x.id,raw),ok=result.kind==='good';box.className=`feedback show ${result.kind}`;box.innerHTML=result.html;ans.classList.add('show');ans.innerHTML=`<p><b>参考例句：</b>${x.examples[0][0]}</p>${x.examples[0][2]?`<p class="kana-reading">${x.examples[0][2]}</p>`:''}<p class="muted">${x.examples[0][1]}</p><p><b>易错点：</b>${x.compare}</p>`;savePractice('grammar',x.id,ok,raw);reviewAnswered=true;showReviewScores()}
+window.checkReviewVocab=function(){if(!currentReviewItem||currentReviewItem.type!=='vocab')return;const x=currentReviewItem.data,input=document.getElementById('reviewVocabInput'),box=document.getElementById('reviewTaskFeedback'),ans=document.getElementById('reviewAnswer'),raw=(input?.value||'').trim();if(!raw){box.className='feedback show neutral';box.innerHTML='<b>先写一个读音。</b>';return}const ok=kataToHira(raw)===kataToHira(x.reading);box.className=`feedback show ${ok?'good':'bad'}`;box.innerHTML=ok?`<b>正解！👏</b> 「${x.word}」读作 ${x.reading}。`:`<b>读音不对。</b> 你写的是「${escapeHtml(raw)}」，正确读音是 <span class="answer-chip">${x.reading}</span>。`;ans.classList.add('show');const my=personalNote('vocab',x.id);ans.innerHTML=`<h3>${x.meaning}</h3><p><b>高频搭配：</b>${x.collocations.slice(0,3).join('；')}</p><p class="muted">${x.note}</p>${my?`<div class="callout"><b>你的记忆钩子：</b>${escapeHtml(my)}</div>`:''}`;savePractice('vocab',x.id,ok,raw);reviewAnswered=true;showReviewScores()}
+window.checkReviewGrammar=function(){if(!currentReviewItem||currentReviewItem.type!=='grammar')return;const x=currentReviewItem.data,input=document.getElementById('reviewGrammarInput'),box=document.getElementById('reviewTaskFeedback'),ans=document.getElementById('reviewAnswer'),raw=(input?.value||'').trim();if(!raw){box.className='feedback show neutral';box.innerHTML='<b>先写一句再判断。</b>';return}const result=localGrammarCheck(x.id,raw),ok=result.kind==='good';box.className=`feedback show ${result.kind}`;box.innerHTML=result.html;ans.classList.add('show');const my=personalNote('grammar',x.id);ans.innerHTML=`<p><b>参考例句：</b>${x.examples[0][0]}</p>${x.examples[0][2]?`<p class="kana-reading">${x.examples[0][2]}</p>`:''}<p class="muted">${x.examples[0][1]}</p><p><b>易错点：</b>${x.compare}</p>${my?`<div class="callout"><b>你的记忆钩子：</b>${escapeHtml(my)}</div>`:''}`;savePractice('grammar',x.id,ok,raw);reviewAnswered=true;showReviewScores()}
 window.revealReviewItem=function(){if(!currentReviewItem)return;const {type,data:x}=currentReviewItem,box=document.getElementById('reviewTaskFeedback'),ans=document.getElementById('reviewAnswer');box.className='feedback show neutral';if(type==='vocab'){box.innerHTML=`正确读音：<span class="answer-chip">${x.reading}</span>`;ans.innerHTML=`<h3>${x.meaning}</h3><p><b>高频搭配：</b>${x.collocations.slice(0,3).join('；')}</p><p class="muted">${x.note}</p>`;savePractice('vocab',x.id,false,'[reveal]')}else{const p=grammarPractice[x.id]||defaultGrammarPractice(x);box.innerHTML='<b>先看参考，再试着自己说一遍。</b>';ans.innerHTML=`<p><b>参考例句：</b>${p.hint}</p><p><b>接续：</b>${x.connection}</p><p><b>易错点：</b>${x.compare}</p>`;savePractice('grammar',x.id,false,'[reveal]')}ans.classList.add('show');reviewAnswered=true;showReviewScores()}
-document.querySelectorAll('[data-rfilter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-rfilter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');reviewFilter=b.dataset.rfilter;reviewIndex=0;renderReview()}));
-document.querySelectorAll('[data-score]').forEach(b=>b.addEventListener('click',()=>{if(!currentReviewItem)return;const item=currentReviewItem,score=Number(b.dataset.score),mins=scoreSRS(item.type,item.id,score);reviewIndex++;renderReview();renderHomeStats();const note=document.getElementById('reviewScheduleNote');if(note)note.textContent=`刚才选择「${b.childNodes[0].textContent.trim()}」，系统已安排 ${reviewIntervalLabel(mins)} 再出现。前三档都会继续复习。`;}));
+document.querySelectorAll('[data-rfilter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-rfilter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');reviewFilter=b.dataset.rfilter;beginReviewSession();renderReview()}));
+document.querySelectorAll('[data-score]').forEach(b=>b.addEventListener('click',()=>{if(!currentReviewItem)return;const item=currentReviewItem,score=Number(b.dataset.score),isExtra=item.sessionKind==='bonus'||item.sessionKind==='repeat';const result=isExtra?scoreMicroReview(item.type,item.id,score,false):scoreSRS(item.type,item.id,score);const label=b.childNodes[0].textContent.trim(),note=document.getElementById('reviewScheduleNote');reviewIndex++;if(score<=1&&(item.sessionRetries||0)<2){const repeat=sessionRepeatItem(item,result),gap=score===0?2:4,at=Math.min(reviewDeck.length,reviewIndex+gap);reviewDeck.splice(at,0,repeat);if(note)note.textContent=`刚才选择「${label}」。这张卡会在本轮稍后再出现一次；正式节点仍是 ${reviewIntervalLabel(result.mins)}。`}else if(note){note.textContent=result.kept?`这是一张额外巩固卡：答对不会把正式复习往后推。`:`刚才选择「${label}」，下一次正式节点是 ${reviewIntervalLabel(result.mins)}。`;}renderReview();renderHomeStats();renderGrammar();renderVocab()}));
 document.getElementById('checkConj').addEventListener('click',checkConjugation);
 document.getElementById('newConjQuestion').addEventListener('click',newConjQuestion);
 document.getElementById('showConjAnswer').addEventListener('click',revealConjugation);
